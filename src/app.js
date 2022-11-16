@@ -1,5 +1,6 @@
 
 const express = require('express')
+const morgan = require("morgan")
 const routerLinea = require('./routes/lineas.routes')
 const app = express()
 
@@ -10,13 +11,16 @@ app.set("puertoLolcito", process.env.port || 2107)
 
 app.use( express.json() )
 
+//middleware
+app.use(express.json())
+app.use(morgan("dev"))
+
 
 /*---------------RUTAS---------------*/
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.use(express.static("public"))
 
 app.use("/api/linea", routerLinea )
+
 
 
 
