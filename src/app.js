@@ -1,8 +1,13 @@
 
 const express = require('express')
 const morgan = require("morgan")
+const conexionDB = require("./conexion")
 const routerLinea = require('./routes/lineas.routes')
 const app = express()
+
+/*--------------CONEXION DB---------------*/
+conexionDB()
+
 
 
 /*---------------CONFIGURACION---------------*/

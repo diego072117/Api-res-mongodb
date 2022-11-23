@@ -1,47 +1,45 @@
+const Linea = require('../Models/Linea')
+
 
 /*---------------GET---------------*/
- exports.find = (req, res) => {
-    const linea =[
-        {
-            
-            tipoLinea: "Mid",
-            descripcion:"En esta linea se jugaran magos y asesinos"
-        },
-        {
-            
-            tipoLinea:"Top",
-            descripcion:"En esta linea se juganar luchadores y tanques"
-        },
-          
-        {
-            
-            tipoLinea:"Jungla",
-            descripcion:"En esta linea se jugara para apoyar al equipo"
-        },
-        {
-            
-            tipoLinea:"Adc",
-            descripcion:"En esta linea jugaran los tiradores campeones de rango"
-        },
-        {
-            
-            tipoLinea:"Suport",
-            descripcion:"El soporte es el que cuida al adc"
-        }
-    ]
-    res.json(linea)
+exports.find = async (req, res) => {
+    
+    try {
+        const linea = await Linea.find()
+        res.json(linea)
+    } catch (error) {
+        res.json(error)
+    }
+
 }
 
 
 /*---------------POST---------------*/
 
-exports.insert = (req, res) => {
+exports.insert = async (req, res) => {
 
-    const { tipoLinea, descripcion } = req.body
+    try {
 
-    console.log(tipoLinea)
-   
-    res.json("Datos recibidos")
+        const { tipoLinea, descripcion } = req.body
+        console.log(tipoLinea)
+
+        if (tipoLinea && descripcion) {
+
+
+            const nuevaLinea = new Linea({ tipoLinea, descripcion })
+            await nuevaLinea.save()
+         
+
+            res.json({mensaje:"Registro insertado", id: nuevaLinea._id})
+
+        }else{
+            res.json({isOk: false, mensaje:"Datos requeridos"})
+        }
+
+
+    } catch (error) {
+        res.json(error)
+    }
 }
 
 /*---------------PUT---------------*/
@@ -51,18 +49,24 @@ exports.update = (req, res) => {
     const idLinea = req.params.idLinea
 
     console.log(idLinea)
-   
+
     res.json("Datos recibidos para actualizar")
 }
 
 /*---------------DELETE---------------*/
 
-exports.drop =(req, res) => {
+exports.drop = async (req, res) => {
 
-    const idLinea = req.params.idLinea
+    try {
+        const idLinea = req.params.idLinea
 
     console.log(idLinea)
-   
-    res.json("id recibido para eliminar")
+    const drop = await Linea.findByIdAndDelete(idLinea)
+
+    res.status(200).json({mensaje:"Registro eliminado", isOK: true})
+    } catch (error) {
+        res.status(500).json(error)
+        
+    }
 }
 

@@ -6,8 +6,8 @@ post http://localhost:2107/api/linea
 Content-Type: application/json
 
  {
-  "tipoLinea": "Mid",
-  "descripcion":"En esta linea se jugaran magos y asesinos"
+   "tipoLinea":"Suport",
+  "descripcion":"El soporte es el que cuida al adc"
  }
 
 ###
@@ -16,4 +16,4 @@ put http://localhost:2107/api/linea/456
 
 ###
 
-delete http://localhost:2107/api/linea/5
+delete http://localhost:2107/api/linea/637d7564bf61e0239c04b676
