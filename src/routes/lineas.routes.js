@@ -1,4 +1,3 @@
-
 const { Router } = require("express")
 const controllerLinea = require('../controllers/lineas.controller')
 const routerLinea = Router()
