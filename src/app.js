@@ -1,14 +1,12 @@
-
 const express = require('express')
 const morgan = require("morgan")
 const conexionDB = require("./conexion")
 const routerLinea = require('./routes/lineas.routes')
+const routerTipoCampeon = require('./routes/tipoCampeon.routes')
 const app = express()
 
 /*--------------CONEXION DB---------------*/
 conexionDB()
-
-
 
 /*---------------CONFIGURACION---------------*/
 app.set("name","api-res-lolcito-nodejs")
@@ -25,8 +23,7 @@ app.use(morgan("dev"))
 app.use(express.static("public"))
 
 app.use("/api/linea", routerLinea )
-
-
+app.use("/api/tipoCampeon", routerTipoCampeon )
 
 
 module.exports = app;
