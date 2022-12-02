@@ -7,12 +7,12 @@ const PersonajeSchema = new Schema({
         require: true
     },
     tipo: [{
-        type: Schema.Types.Number,
-        ref: Tipo
+        type: Schema.Types.ObjectId,
+        ref: 'TipoCampeon'
     }],
     linea: [{
-        type: Schema.Types.Number,
-        ref: Linea
+        type: Schema.Types.ObjectId,
+        ref: 'Linea'
     }]
 
 })

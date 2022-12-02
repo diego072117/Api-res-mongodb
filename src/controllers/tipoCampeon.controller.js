@@ -1,12 +1,12 @@
-const Linea = require('../Models/Linea')
+const TipoCampeon = require('../Models/TipoCampeon')
 
 
 /*---------------GET---------------*/
 exports.find = async (req, res) => {
     
     try {
-        const linea = await Linea.find({estado:true})
-        res.json(linea)
+        const tipoCampeon = await TipoCampeon.find({estado:true})
+        res.json(tipoCampeon)
     } catch (error) {
         res.json(error)
     }
@@ -18,19 +18,19 @@ exports.find = async (req, res) => {
 
 exports.insert = async (req, res) => {
 
-    try {
- 
-        const { tipoLinea, descripcion } = req.body
-        console.log(tipoLinea)
+    try { 
 
-        if (tipoLinea && descripcion) {
+        const { tipoTipoCampeon } = req.body
+        console.log(tipoTipoCampeon)
+
+        if (tipoTipoCampeon) {
 
 
-            const nuevaLinea = new Linea({ tipoLinea, descripcion })
-            await nuevaLinea.save()
+            const nuevaTipoCampeon = new TipoCampeon({ tipoTipoCampeon })
+            await nuevaTipoCampeon.save()
          
 
-            res.json({mensaje:"Registro insertado", id: nuevaLinea._id})
+            res.json({mensaje:"Registro insertado", id: nuevaTipoCampeon._id})
 
         }else{
             res.json({isOk: false, mensaje:"Datos requeridos"})
@@ -49,11 +49,11 @@ exports.update = async (req, res) => {
 
     try {
 
-        const idLinea = req.params.idLinea
+        const idTipoCampeon = req.params.idTipoCampeon
         const datos = req.body 
 
-        if (idLinea && datos) {
-            await Linea.findByIdAndUpdate(idLinea, datos)
+        if (idTipoCampeon && datos) {
+            await TipoCampeon.findByIdAndUpdate(idTipoCampeon, datos)
             res.json("Registro actualizado")
         }else{
             res.json({mensaje:"Datos insuficientes"})
@@ -71,10 +71,10 @@ exports.update = async (req, res) => {
 exports.drop = async (req, res) => {
 
     try {
-        const idLinea = req.params.idLinea
+        const idTipoCampeon = req.params.idTipoCampeon
 
-    console.log(idLinea)
-    const drop = await Linea.findByIdAndUpdate(idLinea, {estado:false})
+    console.log(idTipoCampeon)
+    const drop = await TipoCampeon.findByIdAndUpdate(idTipoCampeon, {estado:false})
 
     res.status(200).json({mensaje:"Registro eliminado", isOK: true})
     } catch (error) {
@@ -82,4 +82,3 @@ exports.drop = async (req, res) => {
         
     }
 }
-
