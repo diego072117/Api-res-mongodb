@@ -20,17 +20,17 @@ exports.insert = async (req, res) => {
 
     try {
 
-        const { TipoCampeon, descripcion } = req.body
-        console.log(TipoCampeon)
+        const { tipoTipoCampeon } = req.body
+        console.log(tipoTipoCampeon)
 
-        if (TipoCampeon && descripcion) {
+        if (tipoTipoCampeon) {
 
 
-            const nuevoTipoCampeon = new TipoCampeon({ TipoCampeon, descripcion })
-            await nuevoTipoCampeon.save()
+            const nuevaTipoCampeon = new TipoCampeon({ tipoTipoCampeon })
+            await nuevaTipoCampeon.save()
          
 
-            res.json({mensaje:"Registro insertado", id: nuevoTipoCampeon._id})
+            res.json({mensaje:"Registro insertado", id: nuevaTipoCampeon._id})
 
         }else{
             res.json({isOk: false, mensaje:"Datos requeridos"})

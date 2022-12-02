@@ -1,24 +1,23 @@
-get http://localhost:2107/api/linea
+get http://localhost:2107/api/tipoCampeon
 
 ###
 
-post http://localhost:2107/api/linea
+post http://localhost:2107/api/tipoCampeon
 Content-Type: application/json
 
  {
-  "tipoLinea":"Adc",
-  "descripcion":"En esta linea jugaran los tiradores campeones de rango"
+    "tipoTipoCampeon": "Asesino"
  }
 ###
 
-put http://localhost:2107/api/linea/637d814eaf5369293411a51c
+put http://localhost:2107/api/tipoCampeon/63894f525a773b9805cfa941
 Content-Type: application/json
 
  {
-  "tipoLinea":"Midlane"
+    "tipoTipoCampeon": "Tirador"
  }
 
 
 ###
 
-delete http://localhost:2107/api/linea/637d814eaf5369293411a51c
+delete http://localhost:2107/api/tipoCampeon/63894f525a773b9805cfa941

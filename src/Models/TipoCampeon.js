@@ -2,7 +2,7 @@ const { Schema, model } = require("mongoose");
 
 const TipoCampeonSchema = new Schema({
 
-    tipoCampeon: {
+    tipoTipoCampeon: {
         type : String,
         require: true
     },
