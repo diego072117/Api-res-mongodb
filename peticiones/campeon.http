@@ -6,7 +6,7 @@ post http://localhost:2107/api/tipoCampeon
 Content-Type: application/json
 
  {
-    "tipoTipoCampeon": "Asesino"
+    "tipoTipoCampeon": "Sanador"
  }
 ###
 

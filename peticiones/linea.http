@@ -6,7 +6,7 @@ post http://localhost:2107/api/linea
 Content-Type: application/json
 
  {
-  "tipoLinea":"Adc",
+  "tipoLinea":"Midlane",
   "descripcion":"En esta linea jugaran los tiradores campeones de rango"
  }
 ###

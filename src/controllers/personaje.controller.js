@@ -112,44 +112,44 @@ exports.insert = async (req, res) => {
     }
 }
 
-// /*---------------PUT---------------*/
+/*---------------PUT---------------*/
 
-// exports.update = async (req, res) => {
-
-
-//     try {
-
-//         const idpers = req.params.idpers
-//         const datos = req.body
-
-//         if (idpers && datos) {
-//             await Personaje.findByIdAndUpdate(idpers, datos)
-//             res.json("Registro actualizado")
-//         } else {
-//             res.json({ mensaje: "Datos insuficientes" })
-//         }
-
-//     } catch (error) {
-//         res.json(error)
-//     }
+exports.update = async (req, res) => {
 
 
-// }
+    try {
 
-// /*---------------DELETE---------------*/
+        const idpers = req.params.idpers
+        const datos = req.body
 
-// exports.drop = async (req, res) => {
+        if (idpers && datos) {
+            await Personaje.findByIdAndUpdate(idpers, datos)
+            res.json("Registro actualizado")
+        } else {
+            res.json({ mensaje: "Datos insuficientes" })
+        }
 
-//     try {
-//         const idpers = req.params.idpers
+    } catch (error) {
+        res.json(error)
+    }
 
-//         console.log(idpers)
-//         const drop = await Personaje.findByIdAndUpdate(idpers, { estado: false })
 
-//         res.status(200).json({ mensaje: "Registro eliminado", isOK: true })
-//     } catch (error) {
-//         res.status(500).json(error)
+}
 
-//     }
-// }
+/*---------------DELETE---------------*/
+
+exports.drop = async (req, res) => {
+
+    try {
+        const idpers = req.params.idpers
+
+        console.log(idpers)
+        const drop = await Personaje.findByIdAndUpdate(idpers, { estado: false })
+
+        res.status(200).json({ mensaje: "Registro eliminado", isOK: true })
+    } catch (error) {
+        res.status(500).json(error)
+
+    }
+}
 
