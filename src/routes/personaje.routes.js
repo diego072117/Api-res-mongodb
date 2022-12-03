@@ -1,22 +1,26 @@
 
 const { Router } = require("express")
 const controllerPersonaje = require('../controllers/personaje.controller')
-const routerLinea = Router()
+const routerPersonaje = Router()
 
 /*---------------GET---------------*/
 
-routerLinea.get('/', controllerPersonaje.find)
+routerPersonaje.get('/', controllerPersonaje.find)
+
+/*---------------GET---------------*/
+
+routerPersonaje.get('/:id', controllerPersonaje.findid)
 
 /*---------------POST---------------*/
 
-routerLinea.post('/:_id', controllerPersonaje.insert)
+routerPersonaje.post('/:idcamp/:idline', controllerPersonaje.insert)
 
 /*---------------PUT---------------*/
 
-routerLinea.put('/:_id', controllerPersonaje.update)
+routerPersonaje.put('/:idpers', controllerPersonaje.update)
 
 /*---------------DELETE---------------*/
 
-routerLinea.delete('/:_id', controllerPersonaje.drop)
+routerPersonaje.delete('/:idpers', controllerPersonaje.drop)
 
-module.exports = routerLinea
+module.exports = routerPersonaje

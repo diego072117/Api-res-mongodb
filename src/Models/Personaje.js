@@ -6,14 +6,18 @@ const PersonajeSchema = new Schema({
         type: String,
         require: true
     },
+    linea: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Linea'
+    }],
     tipo: [{
         type: Schema.Types.ObjectId,
         ref: 'TipoCampeon'
     }],
-    linea: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Linea'
-    }]
+    estado: {
+        type: Boolean,
+        default: true
+    }
 
 })
 
