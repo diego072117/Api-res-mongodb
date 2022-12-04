@@ -13,7 +13,7 @@ const mongoose = require('mongoose');
 // }
 
 
-const conexionDB = module.exports = () => {
+const conexionDB =  () => {
     
     const connectionParams = {
         useNewUrlParser: true,
