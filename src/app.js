@@ -10,7 +10,14 @@ const app = express()
 /*--------------CONEXION DB---------------*/
 conexionDB()
 
+/*--------------VISTAS---------------------*/
+app.use(express.static("public"))
 
+app.set('view engine', 'ejs');
+
+app.set('views', __dirname + '/views')
+
+//app.use('/', require('./routes/paginas.js'));
 
 /*---------------CONFIGURACION---------------*/
 app.set("name","api-res-lolcito-nodejs")
@@ -24,11 +31,13 @@ app.use(morgan("dev"))
 
 
 /*---------------RUTAS---------------*/
-app.use(express.static("public"))
+
 
 app.use("/api/linea", routerLinea )
 app.use("/api/tipoCampeon", routerTipoCampeon)
 app.use("/api/personaje", routerPersonaje)
+
+app.use('/',require('./routes/paginas'))
 
 
 module.exports = app;

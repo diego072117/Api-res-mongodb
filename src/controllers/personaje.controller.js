@@ -44,7 +44,6 @@ exports.insert = async (req, res) => {
 
         const { nombre, tipo, linea } = req.body
         //console.log(req.body)
-
         const idcamp = req.params.idcamp;
         const idline = req.params.idline;
 
@@ -76,6 +75,7 @@ exports.insert = async (req, res) => {
 
         } catch (error) {
             res.json(error)
+
         }
 
 
@@ -108,7 +108,8 @@ exports.insert = async (req, res) => {
 
 
     } catch (error) {
-        res.json(error)
+        
+        res.json(`Verifique los campos tipo y linea que sean existentes ${error}`)
     }
 }
 

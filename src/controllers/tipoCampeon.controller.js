@@ -28,11 +28,12 @@ exports.findid = async (req, res) => {
 
 }
 
+
 /*---------------POST---------------*/
 
 exports.insert = async (req, res) => {
 
-    try { 
+    try {
 
         const { tipoTipoCampeon } = req.body
         console.log(tipoTipoCampeon)
@@ -44,15 +45,15 @@ exports.insert = async (req, res) => {
             await nuevaTipoCampeon.save()
          
 
-            res.json({mensaje:"Registro insertado", id: nuevaTipoCampeon._id})
+            res.json({ mensaje: "Registro insertado", id: nuevaTipoCampeon._id })
 
-        }else{
-            res.json({isOk: false, mensaje:"Datos requeridos"})
+        } else {
+            res.json({ isOk: false, mensaje: "Datos requeridos" })
         }
 
 
     } catch (error) {
-        res.json(error)
+        res.json(error )
     }
 }
 
