@@ -153,12 +153,12 @@ a {
 
 .card {
   position: relative;
-  margin: 20px;
-  width: 350px;
+  margin: 1.25em;
+  width: 21.875em;
   height: 400px;
   background: rgba(205, 205, 205, 0.656);
-  border-radius: 20px;
-  box-shadow: 0 35px 80px rgba(0, 0, 0, 20);
+  border-radius: 1.25em;
+  box-shadow: 0 2.188em 5em rgba(0, 0, 0, 20);
   transition: 0.5s;
 }
 
@@ -169,13 +169,13 @@ a {
 .imgBx {
   position: absolute;
   left: 50%;
-  top: -50px;
+  top: -3.125em;
   transform: translatex(-50%);
-  width: 250px;
-  height: 250px;
+  width: 15.625em;
+  height: 15.625em;
   background: #fff;
   border-radius: 20px;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0.938em 3.125em rgba(0, 0, 0, 0.35);
   overflow: hidden;
   transition: 0.5s;
 }
@@ -205,7 +205,7 @@ a {
 }
 
 .card .content .details{
-  padding: 40px;
+  padding: 2.5em;
   text-align: center;
   width: 100%;
   transition: 0.5;
@@ -243,8 +243,8 @@ a {
 
 .card .content .details .actionBtn a{
   display: flex;
-  padding: 10px 30px;
-  border-radius: 5px;
+  padding: 0.625em 1.875em;
+  border-radius: 0.313em;
   text-decoration: none;
   outline: none;
   font-size: 1em;
@@ -318,21 +318,21 @@ a {
 
   .container-cards{
     /* flex-wrap: wrap; */
-    margin-top: 25%;
+    margin-top: -5%;
     
   }
 
   .card{
     margin-bottom: 3em;
-    width: 250px;
-    height: 300px;
+    width: 15.625em;
+    height: 18.75em;
    
   }
 
 
   .imgBx {
-    width: 150px;
-    height: 150px;
+    width: 9.375em;
+    height: 9.375em;
   }
 
 
@@ -355,15 +355,15 @@ a {
 
   .card{
     margin-bottom: 3em;
-    width: 250px;
-    height: 300px;
+    width: 15.625em;
+    height: 18.75em;
    
   }
 
 
   .imgBx {
-    width: 150px;
-    height: 150px;
+    width: 9.375em;
+    height: 9.375em;
   }
 
 
@@ -386,14 +386,14 @@ a {
 
   .card{
     margin-bottom: 3em;
-    width: 300px;
-    height: 350px;
+    width: 18.75em;
+    height: 21.875em;
   }
 
 
   .imgBx {
-    width: 200px;
-    height: 200px;
+    width: 12.5em;
+    height: 12.5em;
   }
 
   .card .content .details .actionBtn a{
@@ -413,14 +413,14 @@ a {
 
     .card{
       margin-bottom: 3em;
-      width: 300px;
-      height: 350px;
+      width: 18.75em;
+      height: 21.875em;
     }
 
 
     .imgBx {
-      width: 200px;
-      height: 200px;
+      width: 12.5em;
+      height: 12.5em;
     }
 
     .card .content .details .actionBtn a{
