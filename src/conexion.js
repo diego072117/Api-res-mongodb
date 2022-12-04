@@ -27,7 +27,7 @@ const conexionDB =  () => {
         console.log('si se pudo conectar a la base de datos');
     } catch (error) {
         console.log(error);
-        console.log('no se pollo, no se conecto a la base de datos');
+        console.log('no se conecto a la base de datos');
     }
 }
 

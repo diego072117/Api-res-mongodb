@@ -39,5 +39,4 @@ app.use("/api/personaje", routerPersonaje)
 
 app.use('/',require('./routes/paginas'))
 
-
 module.exports = app;
