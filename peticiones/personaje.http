@@ -1,0 +1,27 @@
+get http://localhost:2107/api/personaje
+
+###
+
+get http://localhost:2107/api/personaje/638b8929bd590d046b1562bd
+###
+
+post http://localhost:2107/api/personaje/638cbfa547edbfc67c0b692c/638b8163b35ba8e36fb66750
+Content-Type: application/json
+
+ {
+  "nombre":"UwU"
+
+ }
+###
+
+put http://localhost:2107/api/personaje/638b8163b35ba8e36fb66750
+Content-Type: application/json
+
+ {
+  "nombre":"Midlane"
+ }
+
+
+###
+
+delete http://localhost:2107/api/personaje/638b8929bd590d046b1562bd

@@ -13,6 +13,21 @@ exports.find = async (req, res) => {
 
 }
 
+/*---------------GET---------------*/
+exports.findid = async (req, res) => {
+
+    try {
+        const idTipoCampeon = req.params.idTipoCampeon;
+        const tipoCampeon = await TipoCampeon.findById(idTipoCampeon)
+        console.log(tipoCampeon);
+        res.status(200).json(tipoCampeon);
+    } catch (error) {
+        res.status(500).json(error)
+    }
+
+
+}
+
 
 /*---------------POST---------------*/
 
@@ -30,15 +45,15 @@ exports.insert = async (req, res) => {
             await nuevaTipoCampeon.save()
          
 
-            res.json({mensaje:"Registro insertado", id: nuevaTipoCampeon._id})
+            res.json({ mensaje: "Registro insertado", id: nuevaTipoCampeon._id })
 
-        }else{
-            res.json({isOk: false, mensaje:"Datos requeridos"})
+        } else {
+            res.json({ isOk: false, mensaje: "Datos requeridos" })
         }
 
 
     } catch (error) {
-        res.json(error)
+        res.json(error )
     }
 }
 

@@ -9,7 +9,11 @@ const TipoCampeonSchema = new Schema({
     estado:{
         type: Boolean,
         default: true
-    }
+    },
+    personaje: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Personaje'
+    }]
 
 })
 

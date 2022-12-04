@@ -6,6 +6,10 @@ const routerTipoCampeon = Router()
 
 routerTipoCampeon.get('/', controllerTipoCampeon.find)
 
+/*---------------GET---------------*/
+
+routerTipoCampeon.get('/:idTipoCampeon', controllerTipoCampeon.findid)
+
 /*---------------POST---------------*/
 
 routerTipoCampeon.post('/', controllerTipoCampeon.insert)

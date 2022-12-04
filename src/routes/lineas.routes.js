@@ -1,3 +1,4 @@
+
 const { Router } = require("express")
 const controllerLinea = require('../controllers/lineas.controller')
 const routerLinea = Router()
@@ -5,6 +6,10 @@ const routerLinea = Router()
 /*---------------GET---------------*/
 
 routerLinea.get('/', controllerLinea.find)
+
+/*---------------GET---------------*/
+
+routerLinea.get('/:idLinea', controllerLinea.findid)
 
 /*---------------POST---------------*/
 
