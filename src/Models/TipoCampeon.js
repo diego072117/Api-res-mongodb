@@ -1,15 +1,11 @@
 const { Schema, model } = require("mongoose");
 
-const LineaSchema = new Schema({
+const TipoCampeonSchema = new Schema({
 
-    tipoLinea: {
+    tipoTipoCampeon: {
         type : String,
         require: true
     },
-    descripcion: {
-        type : String,
-        require: true
-    } ,
     estado:{
         type: Boolean,
         default: true
@@ -21,4 +17,4 @@ const LineaSchema = new Schema({
 
 })
 
-module.exports = model( "Linea", LineaSchema )
+module.exports = model( "TipoCampeon", TipoCampeonSchema )

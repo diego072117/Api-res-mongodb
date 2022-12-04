@@ -3,6 +3,8 @@ const express = require('express')
 const morgan = require("morgan")
 const conexionDB = require("./conexion")
 const routerLinea = require('./routes/lineas.routes')
+const routerTipoCampeon = require('./routes/tipoCampeon.routes')
+const routerPersonaje = require('./routes/personaje.routes')
 const app = express()
 
 /*--------------CONEXION DB---------------*/
@@ -25,8 +27,8 @@ app.use(morgan("dev"))
 app.use(express.static("public"))
 
 app.use("/api/linea", routerLinea )
-
-
+app.use("/api/tipoCampeon", routerTipoCampeon)
+app.use("/api/personaje", routerPersonaje)
 
 
 module.exports = app;

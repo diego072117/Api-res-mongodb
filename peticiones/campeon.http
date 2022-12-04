@@ -1,0 +1,23 @@
+get http://localhost:2107/api/tipoCampeon
+
+###
+
+post http://localhost:2107/api/tipoCampeon
+Content-Type: application/json
+
+ {
+    "tipoTipoCampeon": "Sanador"
+ }
+###
+
+put http://localhost:2107/api/tipoCampeon/63894f525a773b9805cfa941
+Content-Type: application/json
+
+ {
+    "tipoTipoCampeon": "Tirador"
+ }
+
+
+###
+
+delete http://localhost:2107/api/tipoCampeon/63894f525a773b9805cfa941
