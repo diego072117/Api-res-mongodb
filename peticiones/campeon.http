@@ -2,6 +2,10 @@ get http://localhost:2107/api/tipoCampeon
 
 ###
 
+get http://localhost:2107/api/tipoCampeon/638bfbe3761d1364402ec57c
+
+###
+
 post http://localhost:2107/api/tipoCampeon
 Content-Type: application/json
 

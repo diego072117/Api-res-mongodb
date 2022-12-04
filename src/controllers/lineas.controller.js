@@ -13,6 +13,21 @@ exports.find = async (req, res) => {
 
 }
 
+/*---------------GET---------------*/
+exports.findid = async (req, res) => {
+
+    try {
+        const idLinea = req.params.idLinea;
+        const linea = await Linea.findById(idLinea)
+        console.log(linea);
+        res.status(200).json(linea);
+    } catch (error) {
+        res.status(500).json(error)
+    }
+
+
+}
+
 
 /*---------------POST---------------*/
 

@@ -7,6 +7,10 @@ const routerLinea = Router()
 
 routerLinea.get('/', controllerLinea.find)
 
+/*---------------GET---------------*/
+
+routerLinea.get('/:idLinea', controllerLinea.findid)
+
 /*---------------POST---------------*/
 
 routerLinea.post('/', controllerLinea.insert)
