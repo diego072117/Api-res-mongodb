@@ -21,7 +21,7 @@ app.set('views', __dirname + '/views')
 
 /*---------------CONFIGURACION---------------*/
 app.set("name","api-res-lolcito-nodejs")
-app.set("puertoLolcito", process.env.port || 2107)
+app.set("puertoLolcito", process.env.PORT || 2107)
 
 app.use( express.json() )
 
@@ -38,5 +38,6 @@ app.use("/api/tipoCampeon", routerTipoCampeon)
 app.use("/api/personaje", routerPersonaje)
 
 app.use('/',require('./routes/paginas'))
+
 
 module.exports = app;

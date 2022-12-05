@@ -2,7 +2,7 @@ get http://localhost:2107/api/tipoCampeon
 
 ###
 
-get http://localhost:2107/api/tipoCampeon/638bfbe3761d1364402ec57c
+get http://localhost:2107/api/tipoCampeon/638d739b2930c476fc9acd16
 
 ###
 
@@ -10,11 +10,11 @@ post http://localhost:2107/api/tipoCampeon
 Content-Type: application/json
 
  {
-    "tipoTipoCampeon": "Sanador"
+    "tipoTipoCampeon": "Asesino"
  }
 ###
 
-put http://localhost:2107/api/tipoCampeon/63894f525a773b9805cfa941
+put http://localhost:2107/api/tipoCampeon/638d739b2930c476fc9acd16
 Content-Type: application/json
 
  {
@@ -24,4 +24,4 @@ Content-Type: application/json
 
 ###
 
-delete http://localhost:2107/api/tipoCampeon/63894f525a773b9805cfa941
+delete http://localhost:2107/api/tipoCampeon/638d739b2930c476fc9acd16

@@ -2,19 +2,19 @@ get http://localhost:2107/api/linea
 
 ###
 
-get http://localhost:2107/api/linea/637d8167af5369293411a51e
+get http://localhost:2107/api/linea/638d0ed53adcd209162e3897
 ###
 
 post http://localhost:2107/api/linea
 Content-Type: application/json
 
  {
-  "tipoLinea":"Mid",
-  "descripcion":"En esta linea jugaran los tiradores campeones de rango"
+  "tipoLinea":"Top",
+  "descripcion":"En esta linea se juganar luchadores y tanques"
  }
 ###
 
-put http://localhost:2107/api/linea/637d814eaf5369293411a51c
+put http://localhost:2107/api/linea/638d0ed53adcd209162e3897
 Content-Type: application/json
 
  {
@@ -24,4 +24,4 @@ Content-Type: application/json
 
 ###
 
-delete http://localhost:2107/api/linea/637d8167af5369293411a51e
+delete http://localhost:2107/api/linea/638d0ed53adcd209162e3897

@@ -3,44 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="../../img/juego.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personaje || Api-rest LoL</title>
 </head>
 <body>
-
     <%- include('templates/nav');%>
 
-<section>
 
-<div class="x">
-    <h1 class="titulo">Rutas Personaje</h1>
-    <div class="texto">
-    <a class="texto">Get</a>
-    </div>
-    <div class="link">
-    <a class="link" href="http://localhost:2107/api/personaje">http://localhost:2107/api/personaje</a>
-    </div>
-    <div class="texto">
-    <a class="texto">Get id</a>
-    </div>
-    <div class="link">
-    <a class="link" href="http://localhost:2107/api/personaje/638b8929bd590d046b1562bd">http://localhost:2107/api/personaje/638b8929bd590d046b1562bd</a>
-    </div>
-    <div class="texto">
-    <a class="texto">Post</a>
-    </div>
-    <div class="link">
-    <a class="link" href="http://localhost:2107/api/personaje/638cbfa547edbfc67c0b692c">http://localhost:2107/api/personaje/638cbfa547edbfc67c0b692c</a>
-    </div>
-    <div class="texto">
-    <a class="texto">Put</a>
-    </div>
-    <div class="link">
-    <a class="link" href="http://localhost:2107/api/personaje/638b8163b35ba8e36fb66750">http://localhost:2107/api/personaje/638b8163b35ba8e36fb66750</a>
-    </div>
-</div>
+    <section class="container-rutas">
 
-</section>
+        <div class="title">
+            <h1>Rutas personaje</h1>
+        </div>
+       
     
+        <div class="rutas">
+    
+            <div class="columna">
+    
+                
+                <div class="link">
+    
+                    <label>Consultar personaje</label>
+                    <hr>
+    
+                    <a class="" href="https://api-res-lolcito-pagameprofe.herokuapp.com/api/personaje">https://api-res-lolcito-pagameprofe.herokuapp.com/api/personaje</a>
+    
+                </div>
+    
+                <div class="link">
+    
+                    <label>Consultar personaje por ID</label>
+                    <hr>
+                    <a class="" href="https://api-res-lolcito-pagameprofe.herokuapp.com/api/personaje/638d73df2930c476fc9acd1c">https://api-res-lolcito-pagameprofe.herokuapp.com/api/personaje/638d73df2930c476fc9acd1c</a>
+                    
+                </div>
+    
+                <div class="link">
+    
+                    <label>Registra una nuevo Personaje</label>
+                    <hr>
+    
+                    <a class="" href="https://api-res-lolcito-pagameprofe.herokuapp.com/api/personaje">https://api-res-lolcito-pagameprofe.herokuapp.com/api/personaje/idLinea/idCampeon</a>
+                    
+                </div>
+    
+           
+                
+                <div class="link">
+    
+                    <label>Actualiza una personaje</label>
+                    <hr>
+        <a class="" href="https://api-res-lolcito-pagameprofe.herokuapp.com/api/personaje/638d73df2930c476fc9acd1c">https://api-res-lolcito-pagameprofe.herokuapp.com/api/personaje/638d73df2930c476fc9acd1c</a>
+                    
+                </div>
+    
+                <div class="link">
+                   
+                    <label>Elimina una personaje</label>
+                    <hr>
+                    <a class="" href="https://api-res-lolcito-pagameprofe.herokuapp.com/api/personaje/638d73df2930c476fc9acd1c">https://api-res-lolcito-pagameprofe.herokuapp.com/api/personaje/638d73df2930c476fc9acd1c</a>
+                    
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    
+    
+    </section>
+
 </body>
 </html>

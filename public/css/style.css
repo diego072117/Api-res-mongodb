@@ -1,6 +1,5 @@
 /*=============== Google Fonts ===============*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 /*=============== Css Variables ===============*/
 :root {
@@ -154,12 +153,12 @@ a {
 
 .card {
   position: relative;
-  margin: 20px;
-  width: 350px;
+  margin: 1.25em;
+  width: 21.875em;
   height: 400px;
   background: rgba(205, 205, 205, 0.656);
-  border-radius: 20px;
-  box-shadow: 0 35px 80px rgba(0, 0, 0, 20);
+  border-radius: 1.25em;
+  box-shadow: 0 2.188em 5em rgba(0, 0, 0, 20);
   transition: 0.5s;
 }
 
@@ -170,13 +169,13 @@ a {
 .imgBx {
   position: absolute;
   left: 50%;
-  top: -50px;
+  top: -3.125em;
   transform: translatex(-50%);
-  width: 250px;
-  height: 250px;
+  width: 15.625em;
+  height: 15.625em;
   background: #fff;
   border-radius: 20px;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0.938em 3.125em rgba(0, 0, 0, 0.35);
   overflow: hidden;
   transition: 0.5s;
 }
@@ -206,7 +205,7 @@ a {
 }
 
 .card .content .details{
-  padding: 40px;
+  padding: 2.5em;
   text-align: center;
   width: 100%;
   transition: 0.5;
@@ -244,8 +243,8 @@ a {
 
 .card .content .details .actionBtn a{
   display: flex;
-  padding: 10px 30px;
-  border-radius: 5px;
+  padding: 0.625em 1.875em;
+  border-radius: 0.313em;
   text-decoration: none;
   outline: none;
   font-size: 1em;
@@ -256,29 +255,68 @@ a {
   margin: 0 30%;
 }
 
+
+
 /* Estilos Rutas */
 
-.x{
-  background-color: rgba(255, 255, 255, 0.692);
-  border-radius: 2em;
-  width: 60em;
-  font-family: 'Roboto', sans-serif;
-  padding-bottom: 0.5em;
-  padding-top: 0.5em;
+.container-rutas{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.714);
+  padding: 0 20em 0 1em;
+  border-radius: 10px;
+
 }
 
-.titulo{
+.title{
+  font-size: 1.5em;
   margin: 1em;
-}
-
-.texto{
-  margin: 0.5em;
-  padding: 0.5em;
+  padding-left: 1.1em;
+  font-family: var(--mono-font);
 }
 
 .link{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  margin-bottom: 1em;
+}
+
+.link label{
+  font-size: 1.2em;
+  font-family: var(--mono-font);
+}
+
+.link hr{
+  border: 0.5px solid;
+  border-color: #555;
+  width: 5em;
+  margin-bottom: 0.5em;
+}
+
+.link a{
+  margin: 0.5em;
+  font-size: 1.1em;
+  font-family: system-ui;
+}
+
+.rutas{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+ 
+}
+
+.columna{
+  display: flex;
+  flex-direction: column;
+  
   margin: 1em;
 }
+
+
+
 
 
 
@@ -341,21 +379,21 @@ a {
 
   .container-cards{
     /* flex-wrap: wrap; */
-    margin-top: 25%;
+    margin-top: -5%;
     
   }
 
   .card{
     margin-bottom: 3em;
-    width: 250px;
-    height: 300px;
+    width: 15.625em;
+    height: 18.75em;
    
   }
 
 
   .imgBx {
-    width: 150px;
-    height: 150px;
+    width: 9.375em;
+    height: 9.375em;
   }
 
 
@@ -368,7 +406,7 @@ a {
 }
 
 /* for medium devices */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 791px) {
 
   .container-cards{
     flex-wrap: wrap;
@@ -378,15 +416,15 @@ a {
 
   .card{
     margin-bottom: 3em;
-    width: 250px;
-    height: 300px;
+    width: 15.625em;
+    height: 18.75em;
    
   }
 
 
   .imgBx {
-    width: 150px;
-    height: 150px;
+    width: 9.375em;
+    height: 9.375em;
   }
 
 
@@ -409,14 +447,14 @@ a {
 
   .card{
     margin-bottom: 3em;
-    width: 300px;
-    height: 350px;
+    width: 18.75em;
+    height: 21.875em;
   }
 
 
   .imgBx {
-    width: 200px;
-    height: 200px;
+    width: 12.5em;
+    height: 12.5em;
   }
 
   .card .content .details .actionBtn a{
@@ -436,14 +474,14 @@ a {
 
     .card{
       margin-bottom: 3em;
-      width: 300px;
-      height: 350px;
+      width: 18.75em;
+      height: 21.875em;
     }
 
 
     .imgBx {
-      width: 200px;
-      height: 200px;
+      width: 12.5em;
+      height: 12.5em;
     }
 
     .card .content .details .actionBtn a{

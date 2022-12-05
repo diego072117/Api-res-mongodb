@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node src/index.js",
     "dev": "nodemon src/index.js"
+  },
+  "engines":{
+    "node": "16.14.2"
   },
   "author": "Diego Parra",
   "license": "ISC",
