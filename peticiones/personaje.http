@@ -2,14 +2,14 @@ get http://localhost:2107/api/personaje
 
 ###
 
-get http://localhost:2107/api/personaje/638b8929bd590d046b1562bd
+get http://localhost:2107/api/personaje/638d73df2930c476fc9acd1c
 ###
 
-post http://localhost:2107/api/personaje/638cbfa547edbfc67c0b692c/638b8163b35ba8e36fb66750
+post http://localhost:2107/api/personaje/638d739b2930c476fc9acd16/638d0ed53adcd209162e3897
 Content-Type: application/json
 
  {
-  "nombre":"UwU"
+  "nombre":"Talon"
 
  }
 ###

@@ -21,7 +21,7 @@ const conexionDB =  () => {
     }
 
     try {
-        mongoose.connect('mongodb+srv://admin:admin@cluster0.rsqqh4c.mongodb.net/campeones?retryWrites=true&w=majority')
+        mongoose.connect('mongodb+srv://Diego:1031643005@cluster0.rmppwlj.mongodb.net/campeones?retryWrites=true&w=majority')
         connectionParams
 
         console.log('si se pudo conectar a la base de datos');
