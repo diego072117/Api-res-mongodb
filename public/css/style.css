@@ -315,6 +315,10 @@ a {
   margin: 1em;
 }
 
+.a2{
+  display: none;
+}
+
 
 
 
@@ -324,6 +328,10 @@ a {
 /* for large devices */
 @media screen and (max-width: 1200px) {
 
+  .container-rutas{
+    margin-top: 5em;
+    width: 90%;
+  }
   
 }
 
@@ -432,8 +440,23 @@ a {
  
     margin: 0 22%;
   }
+
+  .title{
+    font-size: 1.2em;
+    width: 15em;
+  }
+
+  .link label{
+      width: 15em;
+  }
+
+  .a1{
+    display: none;
+  }
   
- 
+ .a2{
+  display: flex;
+ }
 
 }
 
@@ -462,6 +485,11 @@ a {
     margin: 0 28%;
   }
 
+  .link label{
+    font-size: 1em;
+    width: 15em;
+}
+
 }
 
 /* for small devices */
@@ -469,7 +497,6 @@ a {
 
     .container-cards{
       flex-direction: column;
-      
     }
 
     .card{
@@ -488,5 +515,10 @@ a {
  
       margin: 0 28%;
     }
+
+    .link label{
+      font-size: 1em;
+      width: 15em;
+  }
 
   }
